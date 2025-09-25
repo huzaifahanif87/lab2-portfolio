@@ -1,0 +1,393 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: rgb(250, 244, 213);
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 30px;
+}
+
+.logo-box {
+  width: 32px;
+  height: 32px;
+  background: #333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.logo-box span {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Hover Effects */
+a:hover {
+  color: #d4af37 !important;
+}
+button:hover {
+  background: #d4af37 !important;
+  color: white !important;
+  border-color: #d4af37 !important;
+}
+
+/* Main Layout (index page) */
+.main-container {
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.1);
+  padding: 20px 40px;
+}
+
+.left-content {
+  float: left;
+  max-width: 500px;
+}
+
+.right-content {
+  float: right;
+  width: 400px;
+  height: 500px;
+  position: relative;
+}
+
+.right-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Stats */
+.stats {
+  margin-bottom: 60px;
+}
+.stat {
+  float: left;
+  margin-right: 40px;
+}
+.stat h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.stat p {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Headings */
+h1 {
+  font-size: 72px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+
+/* Decorative Circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+.circle-top {
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.1);
+}
+.circle-bottom {
+  bottom: -30px;
+  left: -30px;
+  width: 80px;
+  height: 80px;
+  background: rgba(212,175,55,0.1);
+}
+
+/* Navigation dots */
+.side-dots {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+.nav-dot.active {
+  background: #333;
+  opacity: 1;
+}
+.nav-dot:hover {
+  background: #d4af37 !important;
+  transform: scale(1.2);
+}
+
+/* Year indicator */
+.year {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* Reuseable for hobbies, gallery, contact */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+/* Floats for hobbies page */
+.left-section {
+  float: left;
+  width: 45%;
+}
+.right-section {
+  float: right;
+  width: 50%;
+}
+.poetry-card {
+  border-radius: 12px;
+  border: burlywood 1px solid;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+}
+.poetry-card img {
+    border-radius: 12px 12px 0 0;
+  width: 100%;
+}
+.hobby-list {
+  list-style: none;
+}
+.hobby-item {
+  margin-bottom: 25px;
+}
+.hobby-bullet {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: #333;
+}
+.hobby-content {
+  overflow: hidden; /* clears float */
+}
+
+/* Gallery */
+.gallery-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.gallery-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 450px;
+  margin-right: 20px;
+  border-radius: 16px;
+  overflow: hidden;                 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.gallery-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+
+  scrollbar-width: none;      
+  -ms-overflow-style: none; 
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;              
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c2c2c;
+  border-top: 1px solid #f0f0f0;
+}
+
+
+/* Contact page floats */
+.left-column {
+  float: left;
+  width: 30%;
+}
+.right-column {
+  float: right;
+  width: 65%;
+}
+.contact-item {
+  border: burlywood 1px solid;
+  padding: 24px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.skills-page .container {
+  margin: 10px 50px;
+  padding: 0;
+  /* note: clearfix class should be used on container in HTML */
+}
+
+/* Use floats (keeps the rest of the site unaffected) */
+.skills-page .left-column {
+  float: left;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skills-page .right-column {
+  float: right;
+  width: 62%;
+  display: block;
+  gap: 16px;
+}
+
+/* Keep the card styling identical to other cards */
+.skills-page .skill-item {
+  padding: 20px;
+  border-radius: 12px;
+  border: burlywood 1px solid;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s;
+  overflow: hidden;
+}
+
+/* Hover-lift effect to match gallery cards */
+.skills-page .skill-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.14);
+}
+
+/* Span/large card keeps min height */
+.skills-page .span-2 {
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+/* portfolio images inside skill card */
+.skills-page .portfolio-images {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.skills-page .portfolio-img {
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+
+/* ensure floats are cleared */
+.skills-page .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
